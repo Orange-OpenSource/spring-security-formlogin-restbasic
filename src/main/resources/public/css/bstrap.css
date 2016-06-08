@@ -1,0 +1,93 @@
+/*
+ * #%L
+ * Spring demo
+ * %%
+ * Copyright (C) 2016 Orange
+ * %%
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 2 of the
+ * License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public
+ * License along with this program.  If not, see
+ * <http://www.gnu.org/licenses/gpl-2.0.html>.
+ * #L%
+ */
+body {
+  min-height: 75rem; /* Can be removed; just added for demo purposes */
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-collapse .container-fluid {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid #55595c;
+}
+
+.navbar-collapse h4 {
+  color: #818a91;
+}
+
+.navbar-collapse .text-muted {
+  color: #818a91;
+}
+
+.jumbotron {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+.cardscontainer {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.card {
+  float: left;
+  width: 30%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 0;
+  background-color: #ECEEEF;
+  margin-right: .75rem;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  #%L
+  Spring demo
+  %%
+  Copyright (C) 2016 Orange
+  %%
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 2 of the
+  License, or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public
+  License along with this program.  If not, see
+  <http://www.gnu.org/licenses/gpl-2.0.html>.
+  #L%
+  -->
+<configuration>
+
+    <appender name="LogAllFile" class="ch.qos.logback.core.FileAppender">
+        <file>/tmp/spring-all.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+    <appender name="LogInfoFile" class="ch.qos.logback.core.FileAppender">
+        <file>/tmp/spring-info.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+    <appender name="LogWarnFile" class="ch.qos.logback.core.FileAppender">
+        <file>/tmp/spring-warn.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+    </appender>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="LogAllFile"/>
+        <appender-ref ref="LogInfoFile"/>
+        <appender-ref ref="LogWarnFile"/>
+    </root>
+</configuration>

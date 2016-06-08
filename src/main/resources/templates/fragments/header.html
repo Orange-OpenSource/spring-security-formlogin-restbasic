@@ -1,0 +1,66 @@
+<!--
+  #%L
+  Telsigne
+  %%
+  Copyright (C) 2016 Orange
+  %%
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 2 of the
+  License, or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public
+  License along with this program.  If not, see
+  <http://www.gnu.org/licenses/gpl-2.0.html>.
+  #L%
+  -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+<div th:fragment="header">
+    <div id="navbar-header" class="navbar-collapse collapse inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a th:href="@{/}" class="btn btn-secondary">Home</a>
+                    <a th:if="${!isAuthenticated}" th:href="@{/login}" class="btn btn-secondary">Signin</a>
+                    <form th:if="${isAuthenticated}" th:action="@{/logout}" method = "post">
+                        <button class="btn btn-secondary" type="submit">Logout</button>
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <h4>About</h4>
+                    <p class="text-muted">Spring-boot demo</p>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Contact</h4>
+                    <p class="text-muted"><a href="mailto:christophe.maldivi@orange.com" class="text-muted">Email me</a>
+                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Version</h4>
+                    <p class="text-muted">0.0.1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-static-top navbar-dark bg-inverse">
+        <div class="container-fluid">
+            <button type="button" data-toggle="collapse" data-target="#navbar-header" class="navbar-toggler">
+                &#9776;</button>
+            <a href="#" class="navbar-brand" th:text="${title}"></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

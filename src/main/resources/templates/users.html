@@ -1,0 +1,63 @@
+<!--
+  #%L
+  Spring demo
+  %%
+  Copyright (C) 2016 Orange
+  %%
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 2 of the
+  License, or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public
+  License along with this program.  If not, see
+  <http://www.gnu.org/licenses/gpl-2.0.html>.
+  #L%
+  -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+
+    <th:block th:include="fragments/header-head :: head"></th:block>
+
+    <link href="../public/css/app.css" th:href="@{/css/app.css}" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header">&nbsp;</div>
+
+
+<section class="jumbotron text-xs-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">
+            Users
+        </h1>
+    </div>
+    <br/>
+
+    <div th:if="${not #lists.isEmpty(users)}">
+        <table class="table table-sm table-striped table-bordered" style="margin-top: 1%">
+            <thead>
+            <tr>
+                <th>#id</th>
+                <th>User name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${users}">
+                <td><a th:href="@{/user/{userid}(userid=${user.id})}" th:text="${user.id}"/></td>
+                <td th:text="${user.username}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+</body>
+</html>
