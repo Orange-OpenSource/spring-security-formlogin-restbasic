@@ -21,10 +21,10 @@ As we use [lombok](https://projectlombok.org/), you need to add the lombok plugi
 
 ## Hibernate
 console is enabled in dev mode (disabled by default)
-url: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
-driver: jdbc:h2:mem:testdb
+ - url: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+ - driver: jdbc:h2:mem:testdb
 
-[enable console with spring security](https://springframework.guru/using-the-h2-database-console-in-spring-boot-with-spring-security/)
+More details [here](https://springframework.guru/using-the-h2-database-console-in-spring-boot-with-spring-security/)
 
 ## Hot reloading
 ### a - Code hot reload
