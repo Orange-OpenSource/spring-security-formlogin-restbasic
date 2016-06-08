@@ -34,3 +34,9 @@ More details [here](https://springframework.guru/using-the-h2-database-console-i
 
 ### b - Browser hot reload
 Here we need to install the 'livereload' plugin in the browser, see [here](http://livereload.com/extensions/)
+
+## License
+GPLv2
+
+## Author
+Orange, Christophe Maldivi
