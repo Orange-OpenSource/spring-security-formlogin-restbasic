@@ -260,10 +260,30 @@ or to do a request with mocked csrf and authenticated as admin:
   }
 ```
 
+# Domain
+We try to follow this architecture:
+ - a persistence layer
+ - a domain layer, which has no dependency to the persistence layer (so that changes to the persistence layer should not impact the domain).
+ - a service layer which is the interface between the domain and the persistence layers
+ - a controllers layer which rely on domain objects and services
+
+In addition we try to have immutable objects in the domain:
+```java
+import lombok.Value;
+
+// let's try to be immutable
+@Value 
+public class User {
+  // as we are immutable, we do not need getters and we can allow direct access to fields
+  public final long id;
+  public final String username;
+}
+```
 
 # License, authors
-GPLv2, copyright Orange 2016
+GPLv2, Copyright (C) 2016 Orange
 Christophe Maldivi
+Denis Boisset
 
 # My side notes
 
