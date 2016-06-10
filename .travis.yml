@@ -11,4 +11,15 @@ script: mvn install
 # say 'go to hell' when there is a pb
 notifications:
 email:
- - christophe.maldivi@orange.com
+- christophe.maldivi@orange.com
+
+# openshift deployment
+deploy:
+  provider: openshift
+  user: christophe.maldivi@orange.com
+  password:
+    secure: abi5t4+VwKQdCAKVWsp0nFuUBitCL8pI7Qx+mPOZTKyM1oQAE5qzgd50bINZCJ1RqFNwWgnkuTQQ6FE8K0I0fqZV61t/WuLkuH+Q91y7b5ETJZeMYAY2t1g+j5ZPsWBcMHQ/sYaMzolXHVlDm6lF0AdboZRCnVM9i3On+4EWsaZkigkXOBPJXbDBEIikPg+OM54aHmVswPkeZvaDbG/7/GwCSKPNcpIOrhb6cEgBH7mQlgBE7gYv2CAUIQllxNFCwsHiXyRo1FfpjTZq30wVv4ajuWCljnBjtgKMh89kwsqnavuqS4Qwnccwfk/G5+xU9w26mYLxUoji+SAWYrUiZeXefLth3+7NoQPToE/zABrpTLvxbBW8kTnMLn6C2+ZY1cEiGaSCnkPzlf28c2A9K0iwgUygXAnh5y62qvuln8Nrd/JSpWPALlnczz5A9ZtIXxRzEt1MujpnxRSioTNX0p0fPJak1/eJUomjmjTCOVL1VGgyY84o13HFRYfni72npIQl326MikM69IGa4Jhmk8uaZ2Ytsk/3IqBlEcy0lKYN4P2XMoUgb6Fq+v+nyEa+MYrqu+spB0T5ibSDdcFeyKFuwOF38I0uuwzQezb86fDDCBVHCoS0LuZKshFowoRqpJQwpy4o/nEs+5bBeBLBnypH4h4+41M86P4rHtM5/Fg=
+  app: springsecmvcrestbasic0
+  domain: cmorange
+  on:
+    repo: Orange-OpenSource/spring-security-formlogin-restbasic
