@@ -40,10 +40,6 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    configureRoutes(http);
-  }
-
-  private void configureRoutes(HttpSecurity http) throws Exception {
     disableSecurityOnWebJars(http);
     disableSecForDBConsole(http);
 
@@ -84,10 +80,6 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
   }
 
   private boolean isDevProfile() {
-    String[] profiles = environment.getActiveProfiles();
-    return Arrays.stream(profiles)
-            .filter(profile -> profile.equals("dev"))
-            .findAny()
-            .isPresent();
+    return Arrays.asList(environment.getActiveProfiles()).contains("dev");
   }
 }
