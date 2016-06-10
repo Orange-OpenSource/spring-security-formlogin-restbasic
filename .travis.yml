@@ -8,6 +8,11 @@ jdk:
 install: true
 script: mvn install
 
+# avoid downloading each time maven dependencies
+cache:
+  directories:
+    $HOME/.m2
+
 # say 'go to hell' when there is a pb
 notifications:
 email:
