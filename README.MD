@@ -282,8 +282,8 @@ public class User {
 
 # License, authors
 GPLv2, Copyright (C) 2016 Orange
-Christophe Maldivi
-Denis Boisset
+
+Christophe Maldivi & Denis Boisset
 
 # My side notes
 
