@@ -269,16 +269,18 @@ We try to follow this architecture:
 
 In addition we try to have immutable objects in the domain:
 ```java
-import lombok.Value;
+import lombok.RequiredArgsConstructor;
 
-// let's try to be immutable
-@Value 
+@RequiredArgsConstructor
+/** let's try to be immutable **/
 public class User {
   // as we are immutable, we do not need getters and we can allow direct access to fields
   public final long id;
   public final String username;
 }
 ```
+
+About ```@RequiredArgsConstructor```, it is just a sugar, see [lombok doc](https://projectlombok.org/features): it writes the constructor for us with mandatory (final) fields.
 
 # License, authors
 GPLv2, Copyright (C) 2016 Orange
