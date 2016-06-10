@@ -5,11 +5,10 @@
  - tests: security is tested for all html pages and the REST api
  - use of a domain model
 
-# Build
-```./mvnw clean install```
-
-# Run
-```./mvnw spring-boot:run``` and then open your browser at [http://localhost:8080](http://localhost:8080)
+# Build then Run
+ - ```./mvnw clean install```
+ - ```./mvnw spring-boot:run```
+ - open your browser at [http://localhost:8080](http://localhost:8080)
 
 # Description
 
@@ -130,7 +129,7 @@ public class ApiSecurityConfig extends WebSecurityConfigurerAdapter {
             // open api is... opened
             .antMatchers("/ws/open/**").permitAll()
             // admin api restricted to... ADMIN
-            .antMatchers(/ws/admin/**").hasRole("ADMIN")
+            .antMatchers("/ws/admin/**").hasRole("ADMIN")
             // and the rest is allowed by any authenticated user
             .antMatchers("/ws/sec/**").authenticated()
             .and()
@@ -262,13 +261,11 @@ or to do a request with mocked csrf and authenticated as admin:
 ```
 
 
-# License
-GPLv2
+# License, authors
+GPLv2, copyright Orange 2016
+Christophe Maldivi
 
-# Author
-Orange, Christophe Maldivi
-
-# Notes
+# My side notes
 
 ## TODO
 - use rolling logs to avoid filling the disk...
