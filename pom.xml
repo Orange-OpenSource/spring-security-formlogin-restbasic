@@ -6,7 +6,7 @@
     <groupId>com.orange.accessibility</groupId>
     <artifactId>demo-spring-boot-thymeleaf-jpa-hibernate</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>Demo spring-boot + thymeleaf + jpa-hibernate</name>
 
@@ -41,6 +41,12 @@
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- live reload, etc -->
