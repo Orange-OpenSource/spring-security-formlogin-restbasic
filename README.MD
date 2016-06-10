@@ -271,8 +271,8 @@ In addition we try to have immutable objects in the domain:
 ```java
 import lombok.Value;
 
-// let's try to be immutable
-@Value 
+@Value
+/** let's try to be immutable */
 public class User {
   // as we are immutable, we do not need getters and we can allow direct access to fields
   public final long id;
