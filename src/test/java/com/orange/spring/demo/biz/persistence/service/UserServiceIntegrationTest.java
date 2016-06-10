@@ -10,12 +10,12 @@ package com.orange.spring.demo.biz.persistence.service;
  * it under the terms of the GNU General Public License as
  * published by the Free Software Foundation, either version 2 of the
  * License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public
  * License along with this program.  If not, see
  * <http://www.gnu.org/licenses/gpl-2.0.html>.
@@ -59,12 +59,12 @@ public class UserServiceIntegrationTest {
     // do
     User user = userService.create(new User(id, username), password);
 
-    UserDB userDB = userRepository.findOne(user.getId());
+    UserDB userDB = userRepository.findOne(user.id);
     String passwordHash = userDB.getPasswordHash();
     Set<UserRoleDB> roles = userDB.getUserRoles();
 
     // then
-    Assertions.assertThat(user.getUsername()).isEqualTo(username);
+    Assertions.assertThat(user.username).isEqualTo(username);
     Assertions.assertThat(passwordEncoder.matches(password, passwordHash)).isTrue();
     Assertions.assertThat(passwordEncoder.matches("", passwordHash)).isFalse();
     Assertions.assertThat(roles).hasSize(1);
