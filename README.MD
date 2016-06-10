@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Orange-OpenSource/spring-security-formlogin-restbasic?branch=master)](https://travis-ci.org/Orange-OpenSource/spring-security-formlogin-restbasic) 
+[![Build Status](https://travis-ci.org/Orange-OpenSource/spring-security-formlogin-restbasic.svg?branch=master)](https://travis-ci.org/Orange-OpenSource/spring-security-formlogin-restbasic)
 
 # Spring security demo app
  - spring security with form login AND secured REST api with http basic auth
