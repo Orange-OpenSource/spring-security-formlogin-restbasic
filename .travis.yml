@@ -1,3 +1,14 @@
 language: java
+
+# we need java 8
 jdk:
 - oraclejdk8
+
+# skip build without tests
+install: true
+script: mvn install
+
+# say 'go to hell' when there is a pb
+notifications:
+email:
+ - christophe.maldivi@orange.com
