@@ -10,7 +10,10 @@
  - tests: security is tested for all html pages and the REST api
  - use of a domain model
 
-# Build then Run
+## Try
+Openshift instance is [here](http://springsecmvcrestbasic1-cmorange.rhcloud.com/)
+
+## Build then Run
  - ```./mvnw clean install```
  - ```./mvnw spring-boot:run```
  - open your browser at [http://localhost:8080](http://localhost:8080)
