@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Orange-OpenSource/spring-security-formlogin-restbasic.svg?branch=master)](https://travis-ci.org/Orange-OpenSource/spring-security-formlogin-restbasic)
+[![License](https://img.shields.io/aur/license/yaourt.svg?maxAge=2592000)](https://github.com/bartonhammond/snowflake/blob/master/LICENSE)
 
 # Spring security demo app
  - spring security with form login AND secured REST api with http basic auth
