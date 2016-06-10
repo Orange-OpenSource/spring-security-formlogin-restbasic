@@ -2,7 +2,7 @@
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
-PID=$(ps -ef | grep java.*\.jar | grep -v grep | awk '{ print $2 }')
+PID=$(ps -ef | grep java.*\.war | grep -v grep | awk '{ print $2 }')
 if [ -z "$PID" ]
 then
     client_result "Application is already stopped"
