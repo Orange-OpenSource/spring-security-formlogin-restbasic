@@ -300,6 +300,7 @@ Christophe Maldivi & Denis Boisset
 ## TODO
 - use rolling logs to avoid filling the disk...
 - retry to use pre/post auth for repository, see [spring data example here](https://github.com/spring-projects/spring-data-examples/blob/master/rest/security/src/main/java/example/springdata/rest/security/ItemRepository.java). Right now using "@EnableGlobalMethodSecurity(prePostEnabled = true)" involves a "object already built" exception. Maybe due to 1.4.0_M2 version?
+- apply the uniq constraint on userDB
 - improve UI to let admin remove users
 - improve UI to let admin create a user as an administrator
 
