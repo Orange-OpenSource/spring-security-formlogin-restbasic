@@ -28,7 +28,7 @@
         <jcloverslf4j.version>1.7.21</jcloverslf4j.version>
         <logback.version>1.1.7</logback.version>
         <lombok.version>1.16.8</lombok.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
